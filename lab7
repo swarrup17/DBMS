@@ -14,7 +14,7 @@ insert into department values(22,'BCA',40);
 insert into department values(33,'BIM',30);
 insert into department values(44,'BBS',20);
 insert into department values(54,'BSW',20);
-
+/
 select *from Department;
 /
 delete from department where dept_id=11;
@@ -30,10 +30,14 @@ foreign key (dept_no) references department(dept_id)on delete cascade
 );
 /
 insert into employee values(1001,'Sudeep',40000,'Kathmandu',11);
-insert into employee values(1002,'Ram',30000,'Syanghja',11);
+insert into employee values(1002,'Ram',30000,'Syanghja',54);
 insert into employee values(1003,'Hari',50000,'Pokhara',22);
 insert into employee values(1004,'Shyam',60000,'Dharan',44);
 insert into employee values(1005,'Boss',60000,'Dharan',33);
+/
+select * from employee;
+/
+delete from employee where eid=1001;
 
 /
 select *from department d inner join employee e on (d.dept_id=e.dept_no);     
